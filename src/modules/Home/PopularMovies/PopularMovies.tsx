@@ -53,7 +53,7 @@ const PopularMovies = () => {
         onChange={setActiveTab}
       />
 
-      <MovieListGrid items={movies} isLoading={isFetching} />
+      <MovieListGrid items={movies} />
 
       <div ref={ref} className={styles.loadingTrigger}>
         {isLoading && <p>Loading more...</p>}
