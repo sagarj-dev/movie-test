@@ -1,0 +1,45 @@
+$screen-sm-mobile: 320px;
+$screen-md-mobile: 560px;
+$screen-sm-tablet: 768px;
+$screen-md-tablet: 992px;
+$screen-sm-laptop: 1280px;
+$screen-md-laptop: 1440px;
+
+$breakpoints: (
+  "xmobile": $screen-sm-mobile,
+  "mobile": $screen-md-mobile,
+  "xtablet": $screen-sm-tablet,
+  "tablet": $screen-md-tablet,
+  "xlaptop": $screen-sm-laptop,
+  "laptop": $screen-md-laptop
+);
+
+// colors
+$color-grey-200: #a8aebf;
+$color-grey-300: #8e95a9;
+$color-grey-700: #323b54;
+
+$color-primary-200: #beb7fb;
+$color-primary-300: #9c92f8;
+$color-primary-400: #7b6ef6;
+$color-primary-500: #5a4af4;
+$color-primary-600: #483bc3;
+
+$color-black-20: rgba(0, 0, 0, 0.2);
+$color-black-65: rgba(0, 0, 0, 0.65);
+
+$color-white: #fff;
+
+$color-warning-500: #ffad49;
+
+$color-danger-500: #ff6161;
+// border radius
+$radius-1: 12px;
+
+// spacing
+$spacing-1: 8px;
+$spacing-2: 16px;
+$spacing-3: 24px;
+$spacing-4: 32px;
+$spacing-5: 40px;
+$spacing-6: 48px;

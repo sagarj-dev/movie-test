@@ -1,0 +1,21 @@
+@import "/src/styles/config";
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include on(mobile) {
+    width: 90%;
+  }
+}
+
+@include on(xtablet) {
+  .only_xtablet {
+    display: none;
+  }
+}
+@include on(mobile) {
+  .only_mobile {
+    display: none;
+  }
+}

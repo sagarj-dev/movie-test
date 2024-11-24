@@ -1,0 +1,21 @@
+@import "/src/styles/config";
+
+.container {
+  margin-top: $spacing-4;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: $spacing-2;
+  @include on(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filters {
+  display: flex;
+  gap: $spacing-3;
+  justify-self: flex-end;
+
+  @include on(tablet) {
+    flex-wrap: wrap;
+  }
+}

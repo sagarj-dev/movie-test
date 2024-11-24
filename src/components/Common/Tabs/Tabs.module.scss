@@ -1,0 +1,28 @@
+@import "/src//styles/config";
+.tabListContainer {
+  display: flex;
+  padding: $spacing-1;
+  background-color: $color-black-20;
+  width: fit-content;
+  gap: $spacing-1;
+}
+
+.tabItemContainer {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.tabItem {
+  padding: $spacing-2 $spacing-4;
+  color: white;
+}
+
+.activeTabItem {
+  background-color: $color-primary-400;
+}
+
+.tabContentContainer {
+  margin-top: $spacing-2;
+}

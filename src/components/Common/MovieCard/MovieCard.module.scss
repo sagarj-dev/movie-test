@@ -1,0 +1,49 @@
+@import "/src/styles/config";
+
+.movieCard {
+  position: relative;
+  width: 262px;
+  padding: $spacing-1;
+  background-color: $color-black-65;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-1;
+}
+.imageContainer {
+  position: relative;
+  width: 246px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.title {
+  color: $color-white;
+}
+
+.rating {
+  position: absolute;
+  top: $spacing-2;
+  left: $spacing-2;
+  display: flex;
+  align-items: center;
+  gap: $spacing-1;
+  padding: $spacing-1;
+  background-color: $color-black-65;
+  color: $color-warning-500;
+}
+
+.like {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: $spacing-2;
+  right: $spacing-2;
+  font-size: 16px;
+  padding: $spacing-1;
+  background-color: $color-black-65;
+  color: $color-danger-500;
+}
+
+.date {
+}

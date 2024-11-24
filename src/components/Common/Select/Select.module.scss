@@ -1,0 +1,44 @@
+@import "/src/styles/config";
+
+.selectContainer {
+  position: relative;
+  overflow: visible;
+  width: fit-content;
+}
+
+.selectButton {
+  min-width: 100px;
+  height: $spacing-5;
+  border: none;
+  background-color: transparent;
+  border: 1px solid $color-grey-700;
+  color: $color-white;
+  cursor: pointer;
+  margin-top: $spacing-1;
+  &:focus-within {
+    border: 2px solid $color-primary-500;
+  }
+}
+
+.optionsContainer {
+  position: absolute;
+  width: 100%;
+  top: calc(100% + $spacing-1);
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  border-radius: $radius-1;
+  max-height: 50vh;
+  overflow: scroll;
+}
+
+.dropDownItem {
+  padding: $spacing-2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    border-radius: 0;
+    background-color: $color-primary-400;
+    color: $color-white;
+  }
+}
