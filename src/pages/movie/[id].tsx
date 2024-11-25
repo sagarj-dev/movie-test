@@ -2,11 +2,12 @@ import MovieBanner from "@/modules/Watch/MovieBanner/MovieBanner";
 import MovieDetails from "@/modules/Watch/MovieDetails/MovieDetails";
 import { useLazyGetMovieByIdQuery } from "@/store/services/movieApi";
 import { IMovieDeatils } from "@/types/src/types/movies.type";
+import Head from "next/head";
 import { useParams } from "next/navigation";
 import React, { useEffect } from "react";
 
 const Watch = () => {
-  const [movieDeatils, setMovieDetails] = React.useState<IMovieDeatils | null>(
+  const [movieDetails, setMovieDetails] = React.useState<IMovieDeatils | null>(
     null
   );
   const params = useParams();
@@ -26,13 +27,35 @@ const Watch = () => {
 
   return (
     <>
-      {movieDeatils && (
+      {movieDetails && (
         <div>
+          <Head>
+            <title>{`${movieDetails.title} - Movie Bits`}</title>
+            <meta name="description" content={movieDetails.overview} />
+            <meta property="og:title" content={movieDetails.title} />
+            <meta property="og:description" content={movieDetails.overview} />
+            <meta
+              property="og:image"
+              content={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+            />
+            <meta property="og:type" content="video.movie" />
+            <meta
+              property="og:url"
+              content={`https://www.moviebits.com/movie/${movieDetails.id}`}
+            />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={movieDetails.title} />
+            <meta name="twitter:description" content={movieDetails.overview} />
+            <meta
+              name="twitter:image"
+              content={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+            />
+          </Head>
           <MovieBanner
-            bannerImage={movieDeatils.backdrop_path!}
-            title={movieDeatils.title}
+            bannerImage={movieDetails.backdrop_path!}
+            title={movieDetails.title}
           />
-          <MovieDetails details={movieDeatils} />
+          <MovieDetails details={movieDetails} />
         </div>
       )}
     </>
